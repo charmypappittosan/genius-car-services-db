@@ -71,6 +71,10 @@ async function run(){
         const service=await serviceCollection.findOne(query);
         res.send(service);
        })
+
+       app.get("/hero", async (req,res)=>{
+        res.send('Hero meets heroku');
+       })
        
     //    order collection app
        app.post("/orders",async (req,res)=>{
